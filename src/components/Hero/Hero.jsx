@@ -2,13 +2,12 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import Tilt from 'react-tilt';
-import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import ProjectImg from '../Image/ProjectImg';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta, img } = hero;
+  const { title, name, subtitle, img } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -61,9 +60,14 @@ const Header = () => {
           <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
             <p className="hero-cta">
               <span className="cta-btn cta-btn--hero">
-                <Link to="about" smooth duration={1000}>
-                  {cta || 'Know more'}
-                </Link>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeBL3pDg2nabEzhR0nZ690GN0NXGSy3aQSYFkMzhBPo-Tk0Hg/viewform"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  aria-label={name}
+                >
+                  Join Us
+                </a>
               </span>
             </p>
           </Fade>
