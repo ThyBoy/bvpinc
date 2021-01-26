@@ -1,3 +1,3 @@
 # bvpinc
-BVPInc Website \n
-//bvpinc.herokuapp.com
+BVPInc Website
+[Go to website](https://bvpinc.herokuapp.com)
